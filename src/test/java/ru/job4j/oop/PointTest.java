@@ -34,4 +34,22 @@ public class PointTest {
         double expected = 2;
         assertThat(expected, is(out));
     }
+
+    @Test
+    public void when01to03then211() {
+        Point a = new Point(0, 1, 0);
+        Point b = new Point(0, 3, 4);
+        double out = a.distance3d(b);
+        double expected = 4.47213595499958;
+        assertThat(expected, is(out));
+    }
+
+    @Test
+    public void when10to30then223() {
+        Point a = new Point(1, 0, 1);
+        Point b = new Point(3, 0, 1);
+        double out = a.distance3d(b);
+        double expected = 2;
+        assertThat(expected, is(out));
+    }
 }
