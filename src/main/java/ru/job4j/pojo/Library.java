@@ -17,7 +17,7 @@ public class Library {
 
     private static void printBook(Book[] books, String bookName) {
         for (Book book : books) {
-            if (bookName == null || book.getName().equals(bookName)) {
+            if (bookName == null || bookName.equals(book.getName())) {
                 System.out.println(book.getName() + " - " + book.getCount());
             }
         }
