@@ -50,11 +50,14 @@ public class License {
             return false;
         }
         License license = (License) o;
-        return Objects.equals(getOwner(), license.getOwner()) && Objects.equals(getModel(), license.getModel()) && Objects.equals(getCode(), license.getCode()) && Objects.equals(getCreated(), license.getCreated());
+        return Objects.equals(owner, license.owner)
+                && Objects.equals(model, license.model)
+                && Objects.equals(code, license.code)
+                && Objects.equals(created, license.created);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getOwner(), getModel(), getCode(), getCreated());
+        return Objects.hash(owner, model, code, created);
     }
 }
