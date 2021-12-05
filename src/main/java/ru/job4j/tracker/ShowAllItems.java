@@ -18,10 +18,10 @@ public class ShowAllItems implements UserAction {
         Item[] items = tracker.findAll();
         if (items.length > 0) {
             for (Item item : items) {
-                out.println(item);
+                System.out.println(item);
             }
         } else {
-            out.println("Хранилище еще не содержит заявок");
+            out.println("Хранилище ещё не содержит заявок");
         }
         return true;
     }
