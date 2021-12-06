@@ -11,7 +11,7 @@ public class FactTest {
     }
 
     @Test
-    public void whenTwoThenFive() {
+    public void whenTwoThenTwo() {
         int rsl = Fact.calc(2);
         assertThat(rsl, is(2));
     }
