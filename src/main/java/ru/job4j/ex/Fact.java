@@ -2,10 +2,10 @@ package ru.job4j.ex;
 
 public class Fact {
     public static void main(String[] args) {
-        new Fact().calc(-1);
+        new Fact().calc(2);
     }
 
-    public int calc(int n) {
+    public static int calc(int n) {
         if (n < 0) {
             throw new IllegalArgumentException("Enter a positive number");
         }
