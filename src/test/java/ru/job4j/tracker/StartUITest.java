@@ -61,7 +61,13 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
-        assertThat(out.toString(), is(out.toString()));
+        assertThat(out.toString(), is(
+                "Menu:" + ln
+                        + "=== Find item by id ===" + ln
+                        + one + ln
+                        + "Menu:" + ln
+                        + "=== Exit Program ===" + ln
+        ));
     }
 
     @Test
@@ -78,7 +84,13 @@ public class StartUITest {
         };
         new StartUI(out).init(in, tracker, actions);
         String ln = System.lineSeparator();
-        assertThat(out.toString(), is(out.toString()));
+        assertThat(out.toString(), is(
+                "Menu:" + ln
+                        + "=== Find items by name ===" + ln
+                        + one + ln
+                        + "Menu:" + ln
+                        + "=== Exit Program ===" + ln
+        ));
     }
 
     @Test
@@ -98,6 +110,7 @@ public class StartUITest {
         assertThat(out.toString(), is(
                 "Menu:" + ln
                         + "=== Show all items ===" + ln
+                        + one + ln
                         + "Menu:" + ln
                         + "=== Exit Program ===" + ln
         ));
