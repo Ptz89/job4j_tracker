@@ -33,11 +33,16 @@ public class ValidateInputTest {
     public void whenMultiValidInput() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"1", "2", "3"}
+                new String[]{"1", "2", "3"}
         );
         ValidateInput input = new ValidateInput(out, in);
-        int selected = input.askInt("Enter menu:");
-        assertThat(selected, is(1));
+        int[] actual = new int[3];
+        for (int i = 0; i < actual.length; i++) {
+            int answer = input.askInt("Some question");
+            actual[i] = answer;
+        }
+        int[] expected = new int[]{1, 2, 3};
+        assertThat(actual, is(expected));
     }
 
     @Test
