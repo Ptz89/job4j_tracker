@@ -36,13 +36,15 @@ public class ValidateInputTest {
                 new String[]{"1", "2", "3"}
         );
         ValidateInput input = new ValidateInput(out, in);
-        int[] actual = new int[3];
-        for (int i = 0; i < actual.length; i++) {
-            int answer = input.askInt("Some question");
-            actual[i] = answer;
-        }
-        int[] expected = new int[]{1, 2, 3};
-        assertThat(actual, is(expected));
+        int selected = input.askInt("Enter menu:");
+        assertThat(selected, is(1));
+        input = new ValidateInput(out, in);
+        selected = input.askInt("Enter menu:");
+        assertThat(selected, is(2));
+        input = new ValidateInput(out, in);
+        selected = input.askInt("Enter menu:");
+        assertThat(selected, is(3));
+
     }
 
     @Test
