@@ -49,12 +49,6 @@ public class PhoneDictionaryTest {
         assertThat(persons.get(0).getName(), is("Petr"));
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void whenKeyIsNull() {
-        new PhoneDictionary().find(null);
-
-    }
-
     @Test
     public void whenElementNotFound() {
         PhoneDictionary phones = new PhoneDictionary();
@@ -62,6 +56,6 @@ public class PhoneDictionaryTest {
                 new Person("Petr", "Arsentev", "534872", "Bryansk")
         );
         ArrayList<Person> persons = phones.find("Dimon");
-        assertThat(persons.size(), is(0));
+        assertTrue(persons.isEmpty());
     }
 }
