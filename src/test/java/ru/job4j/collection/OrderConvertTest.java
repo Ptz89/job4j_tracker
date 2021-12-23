@@ -35,4 +35,13 @@ public class OrderConvertTest {
         HashMap<String, Order> map = OrderConvert.process(orders);
         assertNull(map.get("3"));
     }
+
+    @Test
+    public void whenEqualsOrders() {
+        List<Order> orders = new ArrayList<>();
+        orders.add(new Order("3sfe", "Dress"));
+        orders.add(new Order("3sfe", "Dress"));
+        HashMap<String, Order> map = OrderConvert.process(orders);
+        assertThat(map.size(), is(1));
+    }
 }
