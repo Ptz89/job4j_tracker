@@ -2,8 +2,20 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Модель банковского счёта
+ * @author Malyshev Dmitriy
+ * @version 1.0
+ */
 public class Account {
+    /**
+     * Реквизиты банковского счёта
+     */
     private String requisite;
+
+    /**
+     * Баланс банковского счёте
+     */
     private double balance;
 
     public Account(String requisite, double balance) {
@@ -11,18 +23,26 @@ public class Account {
         this.balance = balance;
     }
 
+    /**
+     * Мтод возвращает реквизиты банковского счёта
+     * @return реквизиты банковского счёта
+     */
     public String getRequisite() {
         return requisite;
     }
 
-    public void setRequisite(String requisite) {
-        this.requisite = requisite;
-    }
-
+    /**
+     * Метод возвращает баланс банковского счёте
+     * @return баланс банковского счёте
+     */
     public double getBalance() {
         return balance;
     }
 
+    /**
+     * Метод устанавливает баланс банковского счёта равным переданному значению
+     * @param balance новое значение баланса банковского счёте
+     */
     public void setBalance(double balance) {
         this.balance = balance;
     }
