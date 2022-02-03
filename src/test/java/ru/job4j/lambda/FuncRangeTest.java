@@ -26,8 +26,8 @@ public class FuncRangeTest {
 
     @Test
     public void whenLinearFunctionThenIndicativeResults() {
-        List<Double> result = new FuncRange().diapason(5, 8, x -> 2 * x);
-        List<Double> expected = Arrays.asList(10D, 12D, 14D);
+        List<Double> result = new FuncRange().diapason(2, 5, x -> Math.pow(2, x));
+        List<Double> expected = Arrays.asList(4D, 8D, 16D);
         assertThat(result, is(expected));
     }
 }
