@@ -14,14 +14,6 @@ public class Test {
     }
 
     public static void main(String[] args) {
-        List<Task> tasks = List.of(
-                new Task("Bug #1", 100),
-                new Task("Task #2", 100),
-                new Task("Bug #3", 100)
-        );
-        tasks.stream()
-                .filter(task -> task.name.contains("Bug"))
-                .map(task -> task.name)
-                .forEach(System.out::println);
+
     }
 }
