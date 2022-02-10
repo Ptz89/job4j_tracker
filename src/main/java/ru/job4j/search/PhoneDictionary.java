@@ -11,7 +11,7 @@ public class PhoneDictionary {
     }
 
     public ArrayList<Person> find(String key) {
-        ArrayList<Person> result = new ArrayList<>();
+        var result = new ArrayList<Person>();
         Predicate<Person> byName = p -> p.getName().contains(key);
         Predicate<Person> bySurname = p -> p.getSurname().contains(key);
         Predicate<Person> byPhone = p -> p.getPhone().contains(key);
@@ -21,7 +21,7 @@ public class PhoneDictionary {
                 .or(byAddress)
                 .or(byPhone);
 
-        for (Person person : persons) {
+        for (var person : persons) {
             if (combine.test(person)) {
                 result.add(person);
             }
