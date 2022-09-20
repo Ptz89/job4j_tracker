@@ -7,14 +7,14 @@ public class UniqueText {
         boolean rsl = true;
         String[] origin = originText.split(" ");
         String[] text = duplicateText.split(" ");
-        HashSet<String> check = new HashSet<>();
+        HashSet<String> calculate = new HashSet<>();
 
         for (String str : origin) {
-            check.add(str);
+            calculate.add(str);
         }
 
         for (String txt : text) {
-            if (!check.contains(txt)) {
+            if (!calculate.contains(txt)) {
                 rsl = false;
                 break;
             }

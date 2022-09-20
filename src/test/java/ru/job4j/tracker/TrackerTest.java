@@ -30,7 +30,7 @@ public class TrackerTest {
     }
 
     @Test
-    public void whenTestFindByNameCheckArrayLength() {
+    public void whenTestFindByNamecalculateArrayLength() {
         Tracker tracker = new Tracker();
         Item first = new Item("First");
         Item second = new Item("Second");
@@ -44,7 +44,7 @@ public class TrackerTest {
     }
 
     @Test
-    public void whenTestFindByNameCheckSecondItemName() {
+    public void whenTestFindByNamecalculateSecondItemName() {
         Tracker tracker = new Tracker();
         Item first = new Item("First");
         Item second = new Item("Second");
