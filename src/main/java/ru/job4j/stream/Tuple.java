@@ -22,11 +22,14 @@ public class Tuple {
         return score;
     }
 
-    @SuppressWarnings("checkstyle:NeedBraces")
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Tuple)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Tuple)) {
+            return false;
+        }
         Tuple tuple = (Tuple) o;
         return Double.compare(tuple.getScore(), getScore()) == 0 && getName().equals(tuple.getName());
     }
