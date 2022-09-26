@@ -2,8 +2,6 @@ package ru.job4j.stream;
 
 import java.util.List;
 
-//описывает ученика
-
 public class Pupil {
 
     private String name;
